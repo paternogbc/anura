@@ -1,0 +1,15 @@
+Type: Package
+Package: anura
+Title: A global dataset of Anurans advertisement call
+Version: 1.0.0
+Authors@R: person(
+  "Gustavo", "Paterno", email = "paternogbc@gmail.com",
+  role = c("aut", "cre"))
+Maintainer: Gustavo Brant Paterno <paternogbc@gmail.com>
+Description: A versioned database of advertisement call and body size (snout-vent length
+  (SVL) for 509 Anura species.
+Depends: R (>= 2.10)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1

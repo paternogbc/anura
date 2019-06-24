@@ -1,0 +1,19 @@
+citHeader("If you use this data in publications, please cite:")
+
+citEntry(
+  entry    = "Article",
+  title    = "Background noise as a selective pressure: stream-breeding anurans
+  call at higher frequencies",
+  author   = c("Röhr, David Lucas", "Paterno, Gustavo Brant", "Camurugi, Felipe",
+  "Juncá, Flora Acuña", "Garda, Adrian Antonio"),
+  journal  = "Organisms Diversity and Evolution",
+  year     = "2016",
+  volume   = "16",
+  number   = "1",
+  pages    = "269-273",
+  url      = "http://link.springer.com/10.1007/s13127-015-0256-0",
+  textVersion = paste("Röhr, D. L., G. B. Paterno, F. Camurugi, F. A. Juncá, and A. A. Garda. 2016. Background noise as a selective pressure: stream-breeding anurans call at higher frequencies. Organisms Diversity and Evolution 16:269–273."
+
+  )
+)
+
