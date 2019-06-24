@@ -33,5 +33,5 @@
 #'  and caecilians. Molecular Phylogenetics and Evolution,  61(2), 543-593.
 #'
 #' @source Pruned phylogeny downloaded from \url{https://github.com/paternogbc/2015_Rohr_et_al_JAEcol}
-#'
+#' @docType data
 "anura.tree"

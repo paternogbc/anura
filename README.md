@@ -12,6 +12,12 @@ A global dataset of Anurans advertisement call
 devtools::install_github("paternogbc/anura")
 ```
 
+## Usage
+
+For a quick introduction on how to use the anura dataset, see the [articles page](https://paternogbc.github.io/anura/articles/usage.html). 
+
+For a description of the dataset, see [reference page](https://paternogbc.github.io/anura/reference/index.html)
+
 ## Citation
 
 If you use this data in publications, please cite:
