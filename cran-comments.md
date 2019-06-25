@@ -8,3 +8,13 @@
 0 errors | 0 warnings | 1 note
 
 * This is a new release.
+
+### Notes
+
+* Possibly mis-spelled words in DESCRIPTION:
+    Anura (10:17)
+    Anurans (3:28)
+    SVL (10:4)
+    versioned (9:16)
+  
+__R:__ These words are not misspeled.
