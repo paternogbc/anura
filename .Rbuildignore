@@ -5,3 +5,7 @@
 ^\.travis\.yml$
 ^LICENSE\.md$
 ^vignettes/test\.Rmd$
+^cran-comments\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

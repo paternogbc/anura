@@ -4,7 +4,7 @@ Title: A global dataset of Anurans advertisement call
 Version: 1.0.0
 Authors@R: person(
   "Gustavo", "Paterno", email = "paternogbc@gmail.com",
-  role = c("aut", "cre"))
+  role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9719-3037"))
 Maintainer: Gustavo Brant Paterno <paternogbc@gmail.com>
 Description: A versioned database of advertisement call and body size (snout-vent length
   (SVL) for 509 Anura species.
@@ -14,4 +14,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
-    rmarkdown
+    rmarkdown,
+    knitr,
+    ape
+URL: https://github.com/paternogbc/anura
+BugReports: https://github.com/paternogbc/anura/issues
+VignetteBuilder: knitr

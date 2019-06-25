@@ -1,6 +1,12 @@
 ---
-title: "How to use anura data"
+title: "How to use the anura dataset?"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use the anura dataset?}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
