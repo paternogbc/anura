@@ -3,7 +3,7 @@
   [![Travis build status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
   <!-- badges: end -->
 
-A global dataset of Anurans advertisement call
+A Global Dataset of Anuran Species Advertisement Call
 
 ## Instalation
 
