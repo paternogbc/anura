@@ -1,8 +1,10 @@
 # anura
 <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
-  <!-- badges: end -->
+[![CRAN status](https://www.r-pkg.org/badges/version/anura)](https://cran.r-project.org/package=anura)
 
+  <!-- badges: end -->
+  
 A Global Dataset of Anuran Species Advertisement Call
 
 ## Instalation
