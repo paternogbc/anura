@@ -1,46 +1,69 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # anura
+
 <!-- badges: start -->
-  [![Travis build status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
-[![CRAN status](https://www.r-pkg.org/badges/version/anura)](https://cran.r-project.org/package=anura)
-  <!-- badges: end -->
-  
+
+[![Travis build
+status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/anura)](https://cran.r-project.org/package=anura)
+<!-- badges: end -->
+
 A Global Dataset of Anuran Species Advertisement Call
 
-## Instalation
+## Installation
 
-```R
-# Install the development version from GitHub
+You can install the anura package from [GitHub](https://github.com/)
+with:
+
+``` r
+# install.packages("devtools")
 devtools::install_github("paternogbc/anura")
 ```
 
-## Usage
+## Help
 
-For a quick introduction on how to use the anura dataset, see the [articles page](https://paternogbc.github.io/anura/articles/usage.html). 
+In `R`, documentation for anura dataset can be accessed with the
+standard `help` command (e.g., `?anura.data` and `?anura.tree`).
 
-For a description of the dataset, see [reference page](https://paternogbc.github.io/anura/reference/index.html)
+## Example
 
-## Citation
+This is a basic example which shows you how to solve a common problem:
 
-If you use this data in publications, please cite:
+``` r
+library(anura)
 
-Röhr, D. L., G. B. Paterno, F. Camurugi, F. A. Juncá, and A. A. Garda. 2016.
-Background noise as a selective pressure: stream-breeding anurans call at higher frequencies. [Organisms Diversity and Evolution   16:269–273](https://link.springer.com/article/10.1007%2Fs13127-015-0256-0).
-
-A BibTeX entry for LaTeX users is
-
-```
-@Article{,
-    title = {Background noise as a selective pressure: stream-breeding anurans call at higher frequencies},
-    author = {{Röhr} and David Lucas and {Paterno} and Gustavo Brant and {Camurugi} and {Felipe} and {Juncá} and Flora Acuña and {Garda} and Adrian Antonio},
-    journal = {Organisms Diversity and Evolution},
-    year = {2016},
-    volume = {16},    number = {1},
-    pages = {269-273},
-    url = {http://link.springer.com/10.1007/s13127-015-0256-0},
-}
+# check anura data.frame
+knitr::kable(head(anura.data))
 ```
 
-*** 
-Please note that the 'anura' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+| fam            | sp                         | environment |   DF |   SVL |
+| :------------- | :------------------------- | :---------- | ---: | ----: |
+| Allophrynidae  | Allophryne\_ruthveni       | still       | 4645 | 20.60 |
+| Alsodidae      | Alsodes\_nodosus           | flowing     | 1140 | 75.85 |
+| Alytidae       | Alytes\_cisternasii        | flowing     | 1491 | 41.00 |
+| Arthroleptidae | Cardioglossa\_occidentalis | flowing     | 4100 | 27.30 |
+| Arthroleptidae | Leptopelis\_argenteus      | still       | 1750 | 45.00 |
+| Arthroleptidae | Leptopelis\_bocagii        | still       |  600 | 52.00 |
+
+``` r
+
+# fit a model
+fit <- lm(log10(DF) ~ environment, anura.data)
+
+# make a plot
+library(ggplot2)
+ggplot(anura.data, aes(y = log10(DF), 
+                       x = environment)) +
+  geom_jitter(width = .02, size = .2) +
+  geom_violin(alpha = .6, fill = gray(.7), color = NA) +
+  geom_boxplot(aes(fill = environment),
+               alpha = .3, width = .15,
+               outlier.color = NA,
+               show.legend = F) +
+  theme_light(base_size = 20)
+```
+
+<img src="man/figures/README-example-1.png" width="80%" />

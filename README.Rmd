@@ -1,0 +1,62 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "80%"
+)
+```
+# anura
+
+<!-- badges: start -->
+ [![Travis build status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
+[![CRAN status](https://www.r-pkg.org/badges/version/anura)](https://cran.r-project.org/package=anura)
+<!-- badges: end -->
+
+A Global Dataset of Anuran Species Advertisement Call
+
+## Installation
+
+You can install the anura package from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("paternogbc/anura")
+```
+
+## Help
+
+In `R`, documentation for anura dataset can be accessed with the standard `help`
+command (e.g., `?anura.data` and `?anura.tree`).
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(anura)
+
+# check anura data.frame
+knitr::kable(head(anura.data))
+
+# fit a model
+fit <- lm(log10(DF) ~ environment, anura.data)
+
+# make a plot
+library(ggplot2)
+ggplot(anura.data, aes(y = log10(DF), 
+                       x = environment)) +
+  geom_jitter(width = .02, size = .2) +
+  geom_violin(alpha = .6, fill = gray(.7), color = NA) +
+  geom_boxplot(aes(fill = environment),
+               alpha = .3, width = .15,
+               outlier.color = NA,
+               show.legend = F) +
+  theme_light(base_size = 20)
+```
