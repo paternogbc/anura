@@ -7,8 +7,6 @@
 
 [![Travis build
 status](https://travis-ci.org/paternogbc/anura.svg?branch=master)](https://travis-ci.org/paternogbc/anura)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/anura)](https://cran.r-project.org/package=anura)
 <!-- badges: end -->
 
 A Global Dataset of Anuran Species Advertisement Call
@@ -28,9 +26,12 @@ devtools::install_github("paternogbc/anura")
 In `R`, documentation for anura dataset can be accessed with the
 standard `help` command (e.g., `?anura.data` and `?anura.tree`).
 
+For a online description of the dataset, see [reference
+page](https://paternogbc.github.io/anura/reference/anura.data.html)
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+How to load and use anura.data?
 
 ``` r
 library(anura)
